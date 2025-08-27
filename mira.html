@@ -5,6 +5,20 @@
 	    background-color: rgb(63, 63, 63);
 	    padding: 20px;
 	}
+	#myCanvas {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100vw;
+	    height: 100vh;
+	    display: block;
+		background-color: rgb(36, 36, 36);
+	}
+	body {
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	}
 	</style>
 <div>	
   <head>
@@ -360,8 +374,8 @@
 		 
 		function updateCanvasDimensions() {
 		    canvas.attr({
-		        height: 500,
-		        width: 1000
+		        height: window.innerHeight,
+		        width: window.innerWidth
 		    });
 		    canvasWidth = canvas.width();
 		    canvasHeight = canvas.height();
@@ -478,9 +492,9 @@
 		 
 		    for (var j = 0; j < g.length; j++) {
 		        g[j].curPos.x = (canvasWidth / 2 - offset / 2) + g[j].curPos.x;
-		        g[j].curPos.y = (canvasHeight / 2 - 105) + g[j].curPos.y;
+		        g[j].curPos.y = (canvasHeight / 2) + g[j].curPos.y;
 		        g[j].originalPos.x = (canvasWidth / 2 - offset / 2) + g[j].originalPos.x;
-		        g[j].originalPos.y = (canvasHeight / 2 - 105) + g[j].originalPos.y;
+		        g[j].originalPos.y = (canvasHeight / 2) + g[j].originalPos.y;
 		    }
 		 
 		    pointCollection = new PointCollection();
@@ -523,7 +537,7 @@
 		var green  = [75, 100, 40];
 		var blue   = [196, 77, 55];
 		var purple = [280, 50, 60];
-		var myName = "M i r a"; //sincerely, from Moji :p
+		var myName = "M I T    Retreat    2025"; //sincerely, from Moji :p
 		var letterColors = [red, orange, green, blue, purple];
 
 		if(true){
